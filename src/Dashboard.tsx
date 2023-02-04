@@ -1,6 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { useState } from "react";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
+
+import { Domains } from "./components/Domains";
 import { StatCountCard } from "./components/StatCountCard";
 import { Message } from "./types/message";
 import { getHighSeverityCount, getSpamCount } from "./utils/message";
@@ -38,6 +40,8 @@ export const Dashboard = () => {
         countClassName="text-orange-600"
         label="Spam Messages"
       />
+
+      <Domains messages={messages} className="col-span-2" />
     </div>
   );
 };
