@@ -36,7 +36,7 @@ export const Dashboard = () => {
           id="customer"
           value={customerId}
           onChange={(e) => setCustomerId(e.target.value)}
-          className="border rounded border-slate-500"
+          className="border rounded border-slate-500 dark:bg-slate-800"
         >
           {data.map(({ name, id }) => (
             <option value={id} key={id}>
